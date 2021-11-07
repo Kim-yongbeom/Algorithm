@@ -1,3 +1,4 @@
+# https://programmers.co.kr/learn/courses/30/lessons/77484
 import sys
 def solution(lottos, win_nums):
     score = [6,6,5,4,3,2,1]
