@@ -2,6 +2,7 @@
 def solution(numbers):
     answer = 0
     for i in range(10):
+        # not in 으로도 가능
         if i in numbers:
             answer += 0
         else:
