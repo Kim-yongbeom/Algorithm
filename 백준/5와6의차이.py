@@ -3,6 +3,7 @@ min1 = ''
 min2 = ''
 max1 = ''
 max2 = ''
+# str상태로 값들을 변형해줌
 for i in range(len(num_list[0])):
     if num_list[0][i] == '5':
         min1 += '5'
@@ -24,6 +25,7 @@ for i in range(len(num_list[1])):
     else:
         min2 += num_list[1][i]
         max2 += num_list[1][i]
+# 값들을 더해야 하므로 int로 변경
 max1 = int(max1)
 max2 = int(max2)
 min1 = int(min1)
