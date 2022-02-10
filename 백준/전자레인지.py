@@ -13,9 +13,11 @@ while True:
     elif m >= 10:
         c += 1
         m -= 10
+    # 10보다 작고 실수 -> -1
     elif m >= 1:
         print(-1)
         break
+    # 10보다 클 경우에서 -10을 해주므로 음수가 나올 경우, 0이 나올 경우 break
     else:
         print(a, b, c)
         break
