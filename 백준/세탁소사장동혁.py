@@ -1,3 +1,20 @@
+# 다른사람코드
+# import sys
+# input = sys.stdin.readline
+
+# for i in range(int(input())):
+#     q, d, n, p = 0, 0, 0, 0
+#     t = int(input())
+#     q = t//25
+#     t = t%25
+#     d = t//10
+#     t = t%10
+#     n = t//5
+#     t = t%5
+#     p = t
+
+#     print(q, d, n, p)
+    
 T = int(input())
 
 for i in range(T):
