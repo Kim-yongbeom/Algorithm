@@ -1,10 +1,13 @@
-num = int(input())
-mount = input()
-score = 0
-winner = map(int, mount.split(' '))
-
-for i in range(num):
-    if winner[i] > winner[i+1]:
-        score += 1
-    elif winner[i] < winner[i+1]:
-        score = 0
+N = int(input())
+mountains = list(map(int,input().split()))
+ans = 0
+cnt = 0
+max_mountain = 0
+for mountain in mountains:
+    if mountain > max_mountain:
+        cnt = 0
+        max_mountain = mountain
+    else:
+        cnt += 1
+    ans = max(ans, cnt)
+print(ans)
