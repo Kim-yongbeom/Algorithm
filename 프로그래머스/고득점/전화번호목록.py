@@ -8,9 +8,8 @@ def solution(phone_book):
                 break
     return answer
 
-# 다른 풀이
 
-
+# 다른 풀이 !
 def solution(phoneBook):
     phoneBook = sorted(phoneBook)
 
