@@ -9,7 +9,7 @@ def solution(clothes):
         else:
             closet[key] = [value]
 
-    # -1은 x+1 (안입은 경우 포함) 을 하면서 곱해나가기 때문에 결과에 하나도 안입은 경우가 포함되어서 그 경우를 빼주기 위함입니다.
+    # -1은 x+1 (안입은 경우 포함) 을 하면서 곱해나가기 때문에 결과에 하나도 안입은 경우가 포함되어서 그 경우를 빼주기 위해 사용
     for key in closet.keys():
         result = result * (len(closet[key]) + 1)
     return result - 1
