@@ -8,9 +8,8 @@ def solution(phone_book):
                 break
     return answer
 
-# 다른 풀이
 
-
+# 다른 풀이 !
 def solution(phoneBook):
     phoneBook = sorted(phoneBook)
 
@@ -20,13 +19,11 @@ def solution(phoneBook):
     return True
 
 
-# ```
-# zip 함수
-# print(list(zip([1, 2, 3], (4, 5, 6), "abcd")))
-# -> [[1, 4, 'a'], [2, 5, 'b'], [3, 6, 'c']]
+zip 함수
+print(list(zip([1, 2, 3], (4, 5, 6), "abcd")))
+-> [[1, 4, 'a'], [2, 5, 'b'], [3, 6, 'c']]
 
-# startswith는 꽤 직관적인 함수로 p2가 p1으로 시작되면 True 아니면 False를 반환한다.
-# startswith 함수
-# print("dfagd".startswith("abcd")) False
-# print("abcde".startswith("abcd")) True
-# ```
+startswith는 꽤 직관적인 함수로 p2가 p1으로 시작되면 True 아니면 False를 반환한다.
+startswith 함수
+print("dfagd".startswith("abcd")) False
+print("abcde".startswith("abcd")) True
