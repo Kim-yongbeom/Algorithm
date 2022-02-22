@@ -11,7 +11,8 @@ def solution(numbers):
     # 이 함수는 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받아 인덱스 값을 포함하는 enumerate 객체를 리턴합니다.
     # 보통 enumerate 함수는 for문과 함께 자주 사용됩니다.
     numbers3 = list(enumerate(numbers2))  # 각 원소에 enumerate 함수로 인덱스 붙여줌
-    numbers3.sort(key=lambda x: x[1], reverse=True)  # 원소들의 값에 따라 정렬
+    # 원소들의 값에 따라 정렬, # 원본을 역정렬하고 수정합니다
+    numbers3.sort(key=lambda x: x[1], reverse=True)
     for index, value in numbers3:  # 정렬된 인덱스를 이용해 차례대로 answer 만들기
         answer += str(numbers[index])
 
