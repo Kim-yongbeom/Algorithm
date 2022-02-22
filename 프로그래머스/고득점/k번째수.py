@@ -29,3 +29,11 @@ def solution(array, commands):
         arr = sorted(arr)
         answer.append(arr[commands[i][2]-1])
     return answer
+
+
+# 다른 코드
+def solution(array, commands):
+    answer = []
+    for i,j,k in commands:
+        answer.append(sorted(array[i-1:j])[k-1])
+    return answer
