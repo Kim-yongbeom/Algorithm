@@ -11,7 +11,7 @@ def solution(array, commands):
 
 # 2022-02-21 푼 것!!
 # 반복문 range 부분에 3을 때려넣으면 안됨!! len(commands)로 정확한 값 넣어주기 (문제 잘못 읽음)
-# 이 코드는 .sort() 안됨 why
+# 이 코드는 .sort() 안됨 why !!?
 
 # 이유
 # list.sort()은 list을 그 자리에서 정렬하고 목록 인덱스를 변경하고 None을 반환합니다.(모든 내부 작업은 동일).
@@ -28,4 +28,12 @@ def solution(array, commands):
         arr = array[commands[i][0]-1: commands[i][1]]
         arr = sorted(arr)
         answer.append(arr[commands[i][2]-1])
+    return answer
+
+
+# 다른 코드
+def solution(array, commands):
+    answer = []
+    for i,j,k in commands:
+        answer.append(sorted(array[i-1:j])[k-1])
     return answer
