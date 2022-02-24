@@ -66,3 +66,12 @@ def solution(citations):
 # 참고로 이 경우 H-INDEX는 3이 나와야한다.
 
 # 그러므로 0이 없는 리스트를 위해 return len(citations) 해줘야함
+
+# 다른 느낌의 코드
+def solution(citations):
+    citations.sort(reverse = True)
+    answer = []
+    for i, d in enumerate(citations, start=1) :
+        # i, d중 더 작은것 추가
+        answer.append(min(i,d))
+    return max(answer)
