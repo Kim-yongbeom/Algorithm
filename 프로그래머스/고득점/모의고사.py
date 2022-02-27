@@ -28,9 +28,9 @@ def solution(answers):
     return answer
 
 
-# 2022-02-26 진행중인 코드
+# 2022-02-26
 def solution(answers):
-    answer = []
+    result = []
     score1 = 0
     score2 = 0
     score3 = 0
@@ -38,15 +38,22 @@ def solution(answers):
     people2 = [2, 1, 2, 3, 2, 4, 2, 5]
     people3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
 
-    for i in enumerate(answers):
-        if people1[i[0]] == i[1]:
+    for idx, answer in enumerate(answers):
+        if people1[idx % len(people1)] == answer:
             score1 += 1
-        if people2[i[0]] == i[1]:
+        if people2[idx % len(people2)] == answer:
             score2 += 1
-        if people3[i[0]] == i[1]:
+        if people3[idx % len(people3)] == answer:
             score3 += 1
+    score = max(score1, score2, score3)
+    if score == score1:
+        result.append(1)
+    if score == score2:
+        result.append(2)
+    if score == score3:
+        result.append(3)
 
-    return answer
+    return result
 
 
 # 다른사람 코드
