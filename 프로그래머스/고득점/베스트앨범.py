@@ -1,4 +1,4 @@
-# 진행중
+# 진행중.
 def solution(genres, plays):
     answer = {}
     dic = {}
