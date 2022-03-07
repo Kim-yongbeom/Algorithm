@@ -1,4 +1,3 @@
-# https://programmers.co.kr/learn/courses/30/lessons/42840
 def solution(answers):
     answer = []
     score = [0, 0, 0]
