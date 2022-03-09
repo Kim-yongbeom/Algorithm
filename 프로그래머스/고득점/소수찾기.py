@@ -1,9 +1,5 @@
 # 내 코드
 
-import math
-from itertools import permutations
-
-
 def solution(numbers):
     answer = 0
     numberList = []
@@ -26,8 +22,8 @@ def solution(numbers):
 
 
 # 다른 사람 코드
-
-
+# import math
+# from itertools import permutations
 def is_prime_number(n):
     """소수판별 함수"""
     if n == 0 or n == 1:                                # 0,1 은 소수가 아님
