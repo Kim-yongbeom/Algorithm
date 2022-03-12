@@ -1,5 +1,12 @@
+# 진행중
 def solution(brown, yellow):
     answer = []
-    score = brown + yellow
-    # 갈색과 노랑색 가로 세로 -2차이
+    count = 1
+    while yellow > 2:
+        yellow = yellow // count
+        if yellow % 2 == 0:
+            count += 1
+    print(count)
+    length = count + 2
+
     return answer
