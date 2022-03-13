@@ -45,3 +45,17 @@ def solution(brown, yellow):
                     return [a, b]
 
     return answer
+
+# 다른 코드 2
+
+
+def solution(brown, yellow):
+    s = brown + yellow
+    for i in range(s, 2, -1):
+        print(i)
+        if s % i == 0:
+            a = s//i
+            if yellow == (i-2)*(a-2):
+                return[i, a]
+
+    return answer
