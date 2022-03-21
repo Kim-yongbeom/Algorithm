@@ -26,17 +26,20 @@ def solution(numbers, target):
     answer = DFS(numbers, target, 0)
     return answer
 
-
 def DFS(numbers, target, depth):
     answer = 0
+    print(depth)
     if depth == len(numbers):
-        print(numbers)
         if sum(numbers) == target:
             return 1
-        else:
-            return 0
+        else: return 0
     else:
         answer += DFS(numbers, target, depth+1)
+        print('1',depth)
         numbers[depth] *= -1
+        
         answer += DFS(numbers, target, depth+1)
+        # 왜 depth가 점점 줄어들까..?
+        print('2',depth)
+        # 2, depth가 출력되는데 왜 return으로 안끝날까
         return answer
