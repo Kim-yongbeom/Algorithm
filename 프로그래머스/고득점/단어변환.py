@@ -10,22 +10,17 @@ def solution(begin, target, words):
             answer = 0
             break
 
-        if target == word:
-            answer += 1
-            break
-
         for i in range(len(word)):
             if begin[i] != word[i]:
                 score += 1
-            if score == 2:
+            if score >= 2:
                 break
 
         if score == 1:
+            if target == word:
+                return answer + 1
             answer += 1
             begin = word
-
-            # word에 들어가는 알파벳 전부 삭제
-            # target.strip(word)
             target_word = target.strip(word)
             if len(target_word) == 1:
                 print(word)
