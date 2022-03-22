@@ -24,6 +24,8 @@ def solution(begin, target, words):
             answer += 1
             begin = word
 
+            # word에 들어가는 알파벳 전부 삭제
+            # target.strip(word)
             target_word = target.strip(word)
             if len(target_word) == 1:
                 print(word)
