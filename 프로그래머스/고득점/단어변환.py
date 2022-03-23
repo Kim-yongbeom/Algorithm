@@ -33,3 +33,34 @@ def solution(begin, target, words):
                 return answer + 1
 
     return answer
+
+# 다른사람 코드
+from collections import deque
+
+
+def solution(begin, target, words):
+    answer = 0
+    q = deque()
+    q.append([begin, 0])
+    V = [ 0 for i in range(len(words))]
+    while q:
+        print(q)
+        word, cnt = q.popleft()
+        
+        print(word, cnt)
+        
+        if word == target:
+            answer = cnt
+            break        
+        for i in range(len(words)):
+            temp_cnt = 0
+            if not V[i]:
+                for j in range(len(word)):
+                    if word[j] != words[i][j]:
+                        temp_cnt += 1
+                if temp_cnt == 1:
+                    q.append([words[i], cnt+1])
+                    # 이미 append된 단어는 V = 1 처리
+                    V[i] = 1
+                    
+    return answer
