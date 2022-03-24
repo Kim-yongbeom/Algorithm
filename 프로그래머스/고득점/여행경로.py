@@ -25,3 +25,41 @@ def solution(tickets):
     return answer
 
 # 다른 사람 코드
+def solution(tickets):
+    
+    routes = dict()
+    for i in tickets:
+        if i[0] in routes:
+            routes[i[0]].append(i[1])
+        else:
+            routes[i[0]] = [i[1]]
+    # {'ICN': ['SFO', 'ATL'], 'SFO': ['ATL'], 'ATL': ['ICN', 'SFO']}
+    # print(routes)
+    for i in routes.keys():
+        routes[i].sort(reverse = True)
+    # {'ICN': ['SFO', 'ATL'], 'SFO': ['ATL'], 'ATL': ['SFO', 'ICN']}
+    # print(routes)
+    answer = []
+    start = ["ICN"]
+    
+    while start:
+        # ['ICN']
+        # ['ICN', 'ATL']
+        # ['ICN', 'ATL', 'ICN']
+        # ['ICN', 'ATL', 'ICN', 'SFO']
+        # ['ICN', 'ATL', 'ICN', 'SFO', 'ATL']
+        # ['ICN', 'ATL', 'ICN', 'SFO', 'ATL', 'SFO']
+        # ['ICN', 'ATL', 'ICN', 'SFO', 'ATL']
+        # ['ICN', 'ATL', 'ICN', 'SFO']
+        # ['ICN', 'ATL', 'ICN']
+        # ['ICN', 'ATL']
+        # ['ICN']
+        # print(start)
+        target = start[-1]
+        if target not in routes or len(routes[target]) == 0:
+            answer.append(start.pop())
+        else:
+            start.append(routes[target].pop())
+    # ['SFO', 'ATL', 'SFO', 'ICN', 'ATL', 'ICN']
+    # print(answer)
+    return answer[::-1]
