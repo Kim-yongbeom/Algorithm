@@ -37,6 +37,8 @@ def solution(name):
         # else:
         #     answer += word.index(char)
         answer += min(ord(char) - ord('A'), ord('Z') - ord(char) + 1)
+        # ord(문자)
+        # 하나의 문자를 인자로 받고 해당 문자에 해당하는 유니코드 정수를 반환합니다.
 
         # 해당 알파벳 다음부터 연속된 A 문자열 찾기
         next = i + 1
