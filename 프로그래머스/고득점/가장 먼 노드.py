@@ -27,6 +27,8 @@ def solution(n, edge):
     for e in edge:
         graph[e[0]] = graph.get(e[0], []) + [e[1]]
         graph[e[1]] = graph.get(e[1], []) + [e[0]]
+    # print(graph)
+    # {3: [6, 4, 2, 1], 6: [3], 4: [3, 2], 2: [3, 1, 4, 5], 1: [3, 2], 5: [2]}
     queue = deque()
     queue.append(1)
     visited[0] = 1
