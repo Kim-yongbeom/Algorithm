@@ -34,6 +34,10 @@ def solution(n, edge):
     visited[0] = 1
     while queue:
         nodes = len(queue)
+        # print(queue)
+        # deque([1])
+        # deque([3, 2])
+        # deque([6, 4, 5])
         for i in range(nodes):
             current = queue.popleft()
             for c in graph[current]:
