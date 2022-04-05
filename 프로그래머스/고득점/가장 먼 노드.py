@@ -17,3 +17,31 @@ def solution(n, edge):
                 dic[next_node[1]] += 1
     print(dic)
     return answer
+
+# 다른 사람 코드
+from collections import deque
+def solution(n, edge):
+    answer = 0
+    graph = {}
+    visited = [0]*n
+    for e in edge:
+        graph[e[0]] = graph.get(e[0], []) + [e[1]]
+        graph[e[1]] = graph.get(e[1], []) + [e[0]]
+    # print(graph)
+    # {3: [6, 4, 2, 1], 6: [3], 4: [3, 2], 2: [3, 1, 4, 5], 1: [3, 2], 5: [2]}
+    queue = deque()
+    queue.append(1)
+    visited[0] = 1
+    while queue:
+        nodes = len(queue)
+        # print(queue)
+        # deque([1])
+        # deque([3, 2])
+        # deque([6, 4, 5])
+        for i in range(nodes):
+            current = queue.popleft()
+            for c in graph[current]:
+                if visited[c-1] == 0:
+                    visited[c-1] = 1
+                    queue.append(c)
+    return nodes
