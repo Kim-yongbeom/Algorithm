@@ -1,4 +1,3 @@
-# https://programmers.co.kr/learn/courses/30/lessons/42840
 def solution(answers):
     answer = []
     score = [0, 0, 0]
@@ -63,9 +62,6 @@ def solution(answers):
     pattern3 = [3, 3, 1, 1, 2, 2, 4, 4, 5, 5]
     score = [0, 0, 0]
     result = []
-# https://jongminfire.dev/%ED%8C%8C%EC%9D%B4%EC%8D%AC-enumerate-zip
-# enumerate() 함수는 인자의 값을 추출 할 때 인덱스를 추출하는 기법이다. 함수를 사용하면 인덱스 번호와 컬렉션의 원소를 튜플 형태로 반환한다.
-# idx는 인덱스 번호를 할당 받고, answer는 값을 받음
     for idx, answer in enumerate(answers):
         if answer == pattern1[idx % len(pattern1)]:
             score[0] += 1
