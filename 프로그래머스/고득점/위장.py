@@ -38,8 +38,4 @@ def solution(clothes):
     for val in dic.values():
         answer *= (val + 1)
 
-<<<<<<< HEAD
     return answer - 1
-=======
-    return answer - 1
->>>>>>> d2bceb5acec1412d026449dbccf532831bba17b6
