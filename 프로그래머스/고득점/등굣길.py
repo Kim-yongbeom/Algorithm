@@ -2,7 +2,7 @@ def solution(m,n,puddles):
     grid = [[0]*(m+1) for i in range(n+1)] #왼쪽, 위로 한줄씩 만들어서 IndexError 방지
     if puddles != [[]]:                    #물이 잠긴 지역이 0일 수 있음
         for a, b in puddles:
-            grid[b][a] = -1                #미리 -1로 체크
+            grid[b][a] = -1                #미리 -1로 체크.
     grid[1][1] = 1
     for j in range(1,n+1):
         for k in range(1,m+1):
