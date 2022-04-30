@@ -1,6 +1,6 @@
 # Algorithm
 
-## 자주 나오는 유형
+## 자주 나오는 유형!!
 https://velog.io/@shininghyunho/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%BD%94%ED%85%8C%EB%A5%BC-%EC%9C%84%ED%95%9C-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%A0%95%EB%A6%AC
 
 ## 컴파일 타임
