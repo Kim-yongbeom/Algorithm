@@ -1,3 +1,4 @@
+# https://pacific-ocean.tistory.com/151
 N = int(input())
 
 dp = [[0]*10 for _ in range(N+1)]
